@@ -1,38 +1,9 @@
 import { useState, useEffect } from 'react'
 import propsLogo from './assets/props.png'
-import netGalaLogo from './assets/netgala.png'
+import netGalaLogo from './assets/winderLogo.svg'
 import './App.css'
 
 function App() {
-  const [loadText, setLoadText] = useState('Redirecting to PoolProps');
-
-  function redirectToProps() {
-    window.location.replace('https://poolprops.io')
-  }
-
-  function updateLoadText() {
-    if (loadText==='Redirecting to PoolProps.') {
-    setLoadText('Redirecting to PoolProps..')
-    } else if (loadText==='Redirecting to PoolProps..') {
-      setLoadText('Redirecting to PoolProps...')
-    } else if (loadText==="Redirecting to PoolProps...") {
-      setLoadText('Redirecting to PoolProps')
-    } else if (loadText==="Redirecting to PoolProps") {
-      setLoadText('Redirecting to PoolProps.')
-    }
-
-  }
-
-  useEffect(() => {
-    setLoadText('Redirecting to PoolProps.')
-    setTimeout(redirectToProps, 3000)
-  }, [])
-
-  useEffect(() => {
-    setTimeout(updateLoadText, 500)
-  }, [loadText])
-
-  
 
 
   return (
@@ -45,10 +16,18 @@ function App() {
           <img src={propsLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>{loadText}</h1>
+      <h1>Winder Support</h1>
       <p className="read-the-docs">
-        NetGala new-age sports betting - Powered by PoolProps
+        For support with your winder account, please reach out using the button below
       </p>
+      <a
+        className="button"
+        href="mailto:zacyungblut@gmail.com"
+        target="_blank"
+      >
+        Email
+      </a>
+
     </div>
   )
 }
